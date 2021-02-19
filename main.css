@@ -1,0 +1,97 @@
+body {
+    background-color: rgba(214, 213, 213, 0.575);
+}
+
+.nav-bar {
+    position: fixed;
+    height: 100px;
+    width: 100vw;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    display: grid;
+
+    background-color: white;
+
+}
+
+.logo-bar {
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.logo {
+    height: 90px;
+    display: flex;
+    margin: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#menu_options {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+}
+
+.burger-container {
+    display: none;
+}
+#burger_icon {
+    margin: auto;
+    width: 2em;
+}
+
+.nav-label {
+    padding: 40px;
+    text-decoration: none;
+    color: rgba(0, 43, 87, 0.521);
+}
+
+.nav-label > span {
+    margin: auto;
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+
+#menu_options.visible { /* hacer visible o no */
+    display: flex;
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.877);
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    position: relative;
+    top: -95px; 
+    padding: 30px;
+
+}
+
+#menu_options.visible > .nav-label{
+    display: block;
+}
+
+
+
+/*  MEDIA QUERIES */
+
+@media(max-width: 768px) {
+    #menu_options {
+    display: none;
+    }
+
+    .logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2; 
+    }
+
+    /* hacer que aparezca boton de despliegue de opciones*/
+    .burger-container {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        width: 15%;
+        display: flex;
+}
